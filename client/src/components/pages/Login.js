@@ -23,7 +23,7 @@ function Login() {
 
   const onSubmitForm = () => {
     let userInfo = JSON.parse(localStorage.getItem("userData"));
-    let details = userInfo.filter((item) => item.email === formik.values.email);
+    let details = userInfo?.filter((item) => item.email === formik.values.email);
 
     console.log('details: ', details);
     if (details?.length) {
