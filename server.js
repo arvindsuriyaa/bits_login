@@ -2,10 +2,12 @@ const express = require("express");
 
 const app = express();
 
+// Init middleware
+app.use(express.json({ extended: false })); // equivalent to bodyparser
 
 //serve static assets in production
 if (process.env.NODE_ENV === "production") {
-  //set static folder
+  // set static folder
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
@@ -13,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
