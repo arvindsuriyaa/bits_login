@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/pages/Login";
+import { Route, Routes } from "react-router-dom";
+import Register from "./components/pages/Register";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <div className="nav">
+        <div className="title">Bits Cloud Authentication</div>
+        <div>
+          <b>
+            <p>2021mt93702@wilp.bits-pilani.ac.in</p>
+          </b>
+          <b>
+            <p>Arvind.S</p>
+          </b>
+        </div>
+      </div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
     </div>
   );
 }

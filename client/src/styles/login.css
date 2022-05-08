@@ -1,0 +1,13 @@
+.wrapper{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.title-wrapper{
+    font-size: 30px;
+    font-weight: bolder;
+}
